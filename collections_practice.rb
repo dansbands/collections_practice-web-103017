@@ -30,22 +30,41 @@ def kesha_maker(array)
   }
 end
 
-def find_a(array)
-  new_array = []
+# def find_a(array)
+#   new_array = []
+#
+#   array.each { |item|
+#     new_array << item if item.chr == "a"
+#   }
+#   new_array
+# end
 
-  array.each { |item|
-    new_array << item if item.chr == "a"
+def find_a(array)
+  # new_array = []
+
+  array.select { |item|
+    item if item.chr == "a"
   }
-  new_array
+  # new_array
 end
 
-def sum_array(array)
-  sum = 0
+# def sum_array(array)
+#   sum = 0
+#
+#   array.each { |item|
+#     sum += item
+#   }
+#   sum
+# end
 
-  array.each { |item|
-    sum += item
-  }
-  sum
+def sum_array(array)
+  # sum = 0
+
+  array.inject(:+)
+  # { |item|
+  #   sum += item
+  # }
+  # sum
 end
 
 def add_s(array)
